@@ -81,6 +81,16 @@ public class EnemyMovement : MonoBehaviour
         if (current_Attack_Time > default_Attack_Time) {
 
             enemyAnim.EnemyAttack(Random.Range(0, 3));
+
+            current_Attack_Time = 0f;
+        }
+
+        if(Vector3.Distance(transform.position, playerTarget.position)>
+            attack_Distance + chase_Player_After_Attack)
+        {
+            attackPlayer = false;
+            followPlayer = true;
+
         }
     }//attack
 }//class
