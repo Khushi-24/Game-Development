@@ -50,7 +50,7 @@ MonoBehaviour:
   damage: 2
   is_Player: 1
   is_Enemy: 0
-  hit_FX: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+  hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
 --- !u!1 &1314485481
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   damage: 2
   is_Player: 1
   is_Enemy: 0
-  hit_FX: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+  hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
 --- !u!1 &1831384792
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   damage: 2
   is_Player: 1
   is_Enemy: 0
-  hit_FX: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+  hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
 --- !u!1 &1695294680584609171
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   damage: 2
   is_Player: 1
   is_Enemy: 0
-  hit_FX: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+  hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
 --- !u!1 &4462355174853492559
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 4462355174853492545}
   - component: {fileID: 7706113871467107724}
   - component: {fileID: 3646641053965907718}
+  - component: {fileID: 1887249743}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -295,18 +296,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03e7409d7c266d04b8b064b539b1e9f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2130063625676447214
+--- !u!114 &1887249743
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4462355176653950654}
+  m_GameObject: {fileID: 4462355174853492559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88f9cb54d189d144b81b04a867558ed3, type: 3}
+  m_Script: {fileID: 11500000, guid: a15412b3787674440bcce0fe16bd4211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  is_Player: 0
 --- !u!114 &696528677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,6 +326,18 @@ MonoBehaviour:
   right_Arm_Attack_Point: {fileID: 1314485481}
   left_Leg_Attack_Point: {fileID: 1695294680584609171}
   right_Leg_Attack_Point: {fileID: 1831384792}
+--- !u!114 &2130063625676447214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4462355176653950654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88f9cb54d189d144b81b04a867558ed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4462355176653851056
 PrefabInstance:
   m_ObjectHideFlags: 0

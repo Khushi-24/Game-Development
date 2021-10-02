@@ -12,12 +12,7 @@ public class AttackUniversal : MonoBehaviour
 
     public GameObject hit_FX_Prefab; 
 
-    // Update is called once per frame
-    void Update()
-    {
-        DetectCollision();
-    }
-
+    
     void DetectCollision()
     {
         Collider[] hit = Physics.OverlapSphere(transform.position, radius, collisionLayer);
@@ -38,6 +33,16 @@ public class AttackUniversal : MonoBehaviour
                 }
 
                 Instantiate(hit_FX_Prefab, hitFX_Pos, Quaternion.identity);
+
+                if (gameObject.CompareTag(Tags.LEFT_ARM_TAG) || gameObject.CompareTag(Tags.LEFT_LEG_TAG))
+                {
+                    //hit[0].GetComponent<HealthScript>().ApplyDamage(damage, true);
+                }
+                else
+                {
+                //      xxxxxxxxx    hit[0].GetComponent<HealthScript>().ApplyDamage(damage, false);
+
+                }
 
             }//if is player
 
