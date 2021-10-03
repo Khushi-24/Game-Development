@@ -11,11 +11,15 @@ public class HealthScript : MonoBehaviour
 
     private bool characterDied;
     public bool is_Player;
+    private HealthUI health_UI;
 
     void Awake()
     {
         animationScript = GetComponentInChildren<CharacterAnimation>();
-
+        if (is_Player)
+        {
+        health_UI = GetComponent<HealthUI>();
+        }
     }
 
    public void ApplyDamage(float damage,bool knockDown)
@@ -26,15 +30,19 @@ public class HealthScript : MonoBehaviour
         health -= damage;
 
         //display health ui
+        if (is_Player)
+        {
 
+        health_UI.DisplayHealth(health);
+        }
         if(health <= 0f)
         {
             animationScript.Death();
             characterDied = true;
-
+            //if is player deactivate enemy script
             if (is_Player)
             {
-
+                GameObject.FindWithTag(Tags.ENEMY_TAG).GetComponent<EnemyMovement>().enabled = false;
             }
             return;
         }
@@ -48,6 +56,7 @@ public class HealthScript : MonoBehaviour
                 }
                 else
                 {
+
                     if (Random.Range(0, 3) > 1)
                     {
                         animationScript.Hit();

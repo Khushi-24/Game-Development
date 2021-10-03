@@ -319,16 +319,18 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
+"Assets/Scripts/Camera Scripts/ShakeCamera.cs"
 "Assets/Scripts/Enemy Scripts/EnemyMovement.cs"
 "Assets/Scripts/Helper Scripts/DeactivateGameObject.cs"
+"Assets/Scripts/Helper Scripts/EnemyManager.cs"
 "Assets/Scripts/Helper Scripts/TagManager.cs"
-"Assets/Scripts/Player Scripts/AttackUniversal.cs"
 "Assets/Scripts/Player Scripts/PlayerAttack.cs"
 "Assets/Scripts/Player Scripts/PlayerMovement.cs"
 "Assets/Scripts/Universal Scripts/AttackUniversal.cs"
 "Assets/Scripts/Universal Scripts/CharacterAnimation.cs"
 "Assets/Scripts/Universal Scripts/CharacterAnimationDelegate.cs"
 "Assets/Scripts/Universal Scripts/HealthScript.cs"
+"Assets/Scripts/Universal Scripts/HealthUI.cs"
 -langversion:8.0
 
 /deterministic
